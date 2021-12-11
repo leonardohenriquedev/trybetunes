@@ -1,0 +1,399 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+#root {
+  width: 100%;
+}
+
+body {
+  background-color: #f9f9f6;
+  display: flex;
+  width: 100%;
+}
+
+.loading {
+  width: 100%;
+  height: 95vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading p {
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.459);
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 95vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginContainer img {
+  width: 120px;
+  margin-bottom: 100px;
+}
+
+.loginForm {
+  width: 400px;
+  height: 150px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 0.1px rgba(128, 128, 128, 0.616);
+}
+
+.loginForm input {
+  margin-bottom: 15px;
+  width: 250px;
+  height: 25px;
+  border: 2px solid rgba(128, 128, 128, 0.253);
+  border-radius: 10px;
+  text-align: center;
+  outline: none;
+}
+
+.loginForm button {
+  width: 250px;
+  height: 25px;
+  background-color: rgb(0, 190, 102);
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.loginForm button:disabled {
+  background-color: rgba(182, 182, 182, 0.671);
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 40px;
+  background-color: rgb(0, 177, 53);
+}
+
+header button {
+  padding: 4px 20px;
+  border-radius: 20px;
+  background-color: #f9f9f6;
+  color: rgb(37, 37, 37);
+  border: none;
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.headerLinks {
+  text-decoration: none;
+  color: white;
+  margin-left: 10px;
+}
+
+.inputSearch {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputSearch input {
+  margin-bottom: 15px;
+  width: 250px;
+  height: 25px;
+  border: 2px solid rgba(128, 128, 128, 0.253);
+  border-radius: 10px;
+  text-align: center;
+  outline: none;
+}
+
+.inputSearch button {
+  width: 100px;
+  height: 25px;
+  margin-left: 10px;
+  background-color: rgb(0, 190, 102);
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.inputSearch button:disabled {
+  background-color: rgba(153, 153, 153, 0.596);
+}
+
+.containerSearchResults {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.containerSearchResults p {
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.596);
+}
+
+.searchResults {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.searchResult img {
+  width: 100px;
+  height: 100px;
+}
+
+.searchResult .link {
+  width: 143px;
+  height: 40px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.767);
+  overflow: hidden;
+}
+
+.searchResult {
+  display: flex;
+  width: 250px;
+  height: 100px;
+  margin: 2% 2%;
+  background-color: white;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.103);
+  border: 1px solid rgba(128, 128, 128, 0.397);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.linkAndName {
+  margin: 2px 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.linkAndName p {
+  height: 20px;
+  overflow: hidden;
+}
+
+.linkAndName button {
+  width: 60px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(53, 191, 255);
+  color: white;
+  cursor: pointer;
+}
+
+.linkOuvir {
+  color: white;
+  text-decoration: none;
+}
+
+.album {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.albumInfo img {
+  width: 200px;
+  margin-right: 50px;
+  border-radius: 10px;
+}
+
+.albumInfo {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  justify-content: space-between;
+}
+
+.albumName {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  width: 200px;
+  color: green;
+  font-weight: bolder;
+}
+
+.artistName {
+  color: gray;
+}
+
+.musics {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 200px;
+  width: 60vw;
+  max-width: 700px;
+}
+
+.music {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.034);
+  border-radius: 50px;
+  padding: 0 20px;
+  margin-bottom: 10px;
+}
+
+.music audio {
+  height: 35px;
+}
+
+.music label {
+  margin-left: 20px;
+}
+
+.music input {
+  margin-left: 20px;
+}
+
+.music p {
+  width: 260px;
+}
+
+.albumMusic {
+  margin-bottom: 10px;
+}
+
+.none {
+  display: none;
+}
+
+.favoriteLoading {
+  color: red;
+}
+
+.favoritas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.favoritas > p {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 25px;
+}
+
+.profilePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.profilePage img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.profilePage .Link {
+  margin-top: 20px;
+  text-decoration: none;
+  color: black;
+  background-color: rgba(128, 128, 128, 0.336);
+  padding: 2px 6px;
+  border-radius: 20px;
+}
+
+.profileName {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.profileEmail {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.profileEdit {
+  display: flex;
+  justify-content: center;
+}
+
+.profileEdit form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.profileEdit form input {
+  width: 200px;
+  text-align: center;
+  margin-top: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.151);
+}
+
+.profileEdit form button {
+  cursor: pointer;
+  margin-top: 20px;
+  background-color: rgb(0, 190, 102);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: white;
+}
+
+.profileEdit form button:disabled {
+  cursor: pointer;
+  margin-top: 20px;
+  background-color: rgb(153, 153, 153);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: white;
+}
+
+.profileEdit form label {
+  display: flex;
+  align-items: center;
+}
+
+.profileEdit form textarea {
+  width: 200px;
+  max-width: 200px;
+  height: 50px;
+  min-height: 50px;
+  max-height: 80px;
+  text-align: center;
+  margin-top: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.151);
+}
+
+.profileEdit form label p {
+  width: 80px;
+}
+
+.profileButton {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  padding: 2px 8px;
+  border-radius: 15px;
+}
