@@ -74,7 +74,7 @@ export default class Album extends Component {
     const { musics, loading } = this.state;
 
     return (
-      <div data-testid="page-album">
+      <div data-testid="page-album" className='page-album'>
         <Header />
         {musics !== undefined ? (
           <div className="album">

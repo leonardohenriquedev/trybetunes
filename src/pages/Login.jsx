@@ -47,36 +47,38 @@ export default class Login extends Component {
       <Redirect to="/search" />
     ) : (
       <div data-testid="page-login" className="loginContainer">
-        <img src={logo} alt="trybe-logo" />
-        <form autoComplete="off" className="loginForm">
-          <label htmlFor="inputName"></label>
-          <input
-            type="text"
-            value={inputName}
-            onChange={this.handleChange}
-            data-testid="login-name-input"
-            id="inputName"
-            placeholder="Nome"
-            onKeyPress={(event) => {
-              if (event.key === 'Enter') {
-                this.onLoading({ name: inputName });
-              }
-            }}
-          />
-          {inputName.length >= minimumLength ? (
-            <button
-              data-testid="login-submit-button"
-              onClick={() => this.onLoading({ name: inputName })}
-              type="button"
-            >
-              Entrar
-            </button>
-          ) : (
-            <button type="submit" data-testid="login-submit-button" disabled>
-              Entrar
-            </button>
-          )}
-        </form>
+        <div className='login-wrapper'>
+          <img src={logo} alt="trybe-logo" />
+          <form autoComplete="off" className="loginForm">
+            <label htmlFor="inputName"></label>
+            <input
+              type="text"
+              value={inputName}
+              onChange={this.handleChange}
+              data-testid="login-name-input"
+              id="inputName"
+              placeholder="Nome"
+              onKeyPress={(event) => {
+                if (event.key === 'Enter') {
+                  this.onLoading({ name: inputName });
+                }
+              }}
+            />
+            {inputName.length >= minimumLength ? (
+              <button
+                data-testid="login-submit-button"
+                onClick={() => this.onLoading({ name: inputName })}
+                type="button"
+              >
+                Entrar
+              </button>
+            ) : (
+              <button type="submit" data-testid="login-submit-button" disabled>
+                Entrar
+              </button>
+            )}
+          </form>
+        </div>
       </div>
     );
   }
