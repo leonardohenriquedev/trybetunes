@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router';
 import Loading from '../components/Loading';
 import { createUser } from '../services/userAPI';
-import logo from '../login.png';
+import logo from '../trybe.png';
 import video from '../garden.mp4';
 import music from '../pour-over.mp3';
 
@@ -71,6 +71,7 @@ export default class Login extends Component {
             Your browser does not support the audio element.
           </audio>
           <img src={logo} alt="trybe-logo" />
+          <h1>Tunes</h1>
           <form autoComplete="off" className="loginForm">
             <label htmlFor="inputName"></label>
             <input

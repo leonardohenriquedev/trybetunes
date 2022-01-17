@@ -39,23 +39,27 @@ body {
 .login-wrapper {
   display: flex;
   width: 230px;
-  opacity: 75%;
+  /* opacity: 75%; */
   height: 220px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #f9f9f6;
+  background-color: #f9f9f6d2;
   border-radius: 10px;
   z-index: 10;
 }
 
 .loginContainer img {
   width: 120px;
-  margin-bottom: 20px;
+  margin-bottom: -5px;
+}
+
+.loginContainer H1 {
+  margin-bottom: 15px;
 }
 
 .loginForm {
-  background-color: #f9f9f6;
+  /* background-color: #f9f9f6; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,11 +73,11 @@ body {
   height: 25px;
   border-radius: 10px;
   text-align: center;
+  background-color: #f9f9f600;
   outline: none;
-  background-color:none;
   border: 1px solid rgba(0, 0, 0, 0.253);
   /* opacity: 80%; */
-  background-color: #f9f9f6;
+  /* background-color: #f9f9f6; */
 }
 
 .loginForm button {
