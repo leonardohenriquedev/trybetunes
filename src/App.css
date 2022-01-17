@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   box-sizing: border-box;
 }
@@ -52,7 +52,6 @@ body {
 .loginContainer img {
   width: 120px;
   margin-bottom: 20px;
-  /* margin-bottom: 100px; */
 }
 
 .loginForm {
@@ -62,7 +61,6 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  /* box-shadow: 2px 2px 2px 0.1px rgba(128, 128, 128, 0.616); */
 }
 
 .loginForm input {
@@ -423,4 +421,4 @@ video {
   filter: blur(10px);
   position: fixed;
   z-index: 0;
-}
+} */
