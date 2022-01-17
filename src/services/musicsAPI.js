@@ -1,7 +1,7 @@
 // import fetch from 'node-fetch';
 
 const getMusics = async (id) => {
-  const request = await fetch(`https://itunes.apple.com/lookup?id=${id}&entity=song`, {header: "https://trybetunes-leonardohenriquedev.vercel.app/"});
+  const request = await fetch(`https://cors-anywhere.herokuapp.com/https://itunes.apple.com/lookup?id=${id}&entity=song`);
   const requestJson = await request.json();
   return requestJson.results;
 };
