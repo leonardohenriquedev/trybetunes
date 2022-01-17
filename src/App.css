@@ -39,7 +39,7 @@ body {
 .login-wrapper {
   display: flex;
   width: 230px;
-  /* opacity: 80%; */
+  opacity: 75%;
   height: 220px;
   justify-content: center;
   align-items: center;
@@ -72,7 +72,7 @@ body {
   outline: none;
   background-color:none;
   border: 1px solid rgba(0, 0, 0, 0.253);
-  opacity: 80%;
+  /* opacity: 80%; */
   background-color: #f9f9f6;
 }
 
