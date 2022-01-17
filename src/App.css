@@ -46,7 +46,7 @@ body {
   flex-direction: column;
   background-color: #f9f9f6;
   border-radius: 10px;
-  z-index: 1;
+  z-index: 10;
 }
 
 .loginContainer img {
