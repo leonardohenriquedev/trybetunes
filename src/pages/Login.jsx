@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router';
 import Loading from '../components/Loading';
 import { createUser } from '../services/userAPI';
-import logo from '../trybe.png';
+import logo from '../login.png';
 import video from '../garden.mp4';
 import music from '../pour-over.mp3';
+import { playMusic } from '../services/music';
 
 export default class Login extends Component {
   constructor() {
@@ -21,15 +22,6 @@ export default class Login extends Component {
     this.renderPage = this.renderPage.bind(this);
   }
 
-  componentDidMount() {
-    document.getElementById('backgroundMusic').currentTime = 8;
-  }
-
-  playMusic() {
-    document.getElementById('backgroundMusic').play();
-    document.getElementById('backgroundMusic').volume = 0.2;
-  }
-
   handleChange(event) {
     const { id, value } = event.target;
     this.setState({
@@ -37,14 +29,14 @@ export default class Login extends Component {
     });
   }
 
-  onLoading(inputName) {
+  async onLoading(inputName) {
     const { history } = this.props;
   
     this.setState({
       loading: true,
     });
 
-    // await createUser(inputName);
+    await createUser(inputName);
 
     this.setState(
       {
@@ -71,7 +63,7 @@ export default class Login extends Component {
             Your browser does not support the audio element.
           </audio>
           <img src={logo} alt="trybe-logo" />
-          <h1>Tunes</h1>
+          {/* <h1>Tunes</h1> */}
           <form autoComplete="off" className="loginForm">
             <label htmlFor="inputName"></label>
             <input
@@ -82,18 +74,18 @@ export default class Login extends Component {
               id="inputName"
               placeholder="Nome"
               autoComplete="off"
-              onClick={this.playMusic}
+              onClick={playMusic}
               onKeyPress={(event) => {
                 if (event.key === 'Enter') {
                   this.onLoading({ name: inputName });
                 }
               }}
             />
-            <input
+            {/* <input
               type="password"
               placeholder="Senha"
               autoComplete="off"
-            ></input>
+            ></input> */}
             {inputName.length >= minimumLength ? (
               <button
                 data-testid="login-submit-button"

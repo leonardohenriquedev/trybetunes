@@ -39,27 +39,26 @@ body {
 .login-wrapper {
   display: flex;
   width: 230px;
-  /* opacity: 75%; */
   height: 220px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #f9f9f6d2;
+  background-color: #f9f9f6c4;
   border-radius: 10px;
   z-index: 10;
 }
 
 .loginContainer img {
   width: 120px;
-  margin-bottom: -5px;
+  margin-bottom: 15px;
 }
 
 .loginContainer H1 {
   margin-bottom: 15px;
+  color: rgba(12, 160, 110, 0.979);
 }
 
 .loginForm {
-  /* background-color: #f9f9f6; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,8 +75,6 @@ body {
   background-color: #f9f9f600;
   outline: none;
   border: 1px solid rgba(0, 0, 0, 0.253);
-  /* opacity: 80%; */
-  /* background-color: #f9f9f6; */
 }
 
 .loginForm button {
@@ -423,6 +420,11 @@ video {
   overflow: hidden;
   transform: scale(1.5);
   filter: blur(10px);
-  position: fixed;
   z-index: 0;
+  position: fixed;
+  /* display: none; */
+}
+
+.player{
+  display: none;
 }

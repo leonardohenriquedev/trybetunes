@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Loading from '../components/Loading';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
+import { pauseMusic } from '../services/music';
+
 
 export default class Search extends Component {
   constructor() {
@@ -73,6 +75,7 @@ export default class Search extends Component {
                   data-testid={`link-to-album-${album.collectionId}`}
                   key={album.collectionId}
                   className="linkOuvir"
+                  onClick={pauseMusic}
                 >
                   Ouvir
                 </Link></button>

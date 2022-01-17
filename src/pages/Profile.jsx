@@ -62,7 +62,7 @@ export default class Profile extends Component {
             <p className="profileName">{profile.name}</p>
             <p className="profileEmail">{profile.email}</p>
             <p className="profileDescription">{profile.description}</p>
-            <Link to="/profile/edit" className="Link">
+            <Link to="/editing" className="Link">
               Editar perfil
             </Link>
           </div>
