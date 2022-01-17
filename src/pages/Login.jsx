@@ -31,7 +31,7 @@ export default class Login extends Component {
 
   async onLoading(inputName) {
     const { history } = this.props;
-  
+
     this.setState({
       loading: true,
     });
@@ -42,7 +42,8 @@ export default class Login extends Component {
       {
         loading: false,
         // redirect: true,
-      },()=>history.push("/search")
+      },
+      () => history.push('/search')
     );
   }
 
@@ -65,22 +66,26 @@ export default class Login extends Component {
           <img src={logo} alt="trybe-logo" />
           {/* <h1>Tunes</h1> */}
           <form autoComplete="off" className="loginForm">
-            <label htmlFor="inputName"></label>
-            <input
-              type="text"
-              value={inputName}
-              onChange={this.handleChange}
-              data-testid="login-name-input"
-              id="inputName"
-              placeholder="Nome"
-              autoComplete="off"
-              onClick={playMusic}
-              onKeyPress={(event) => {
-                if (event.key === 'Enter') {
-                  this.onLoading({ name: inputName });
-                }
-              }}
-            />
+            <div className="boxName">
+              <label htmlFor="inputName" className="labelName">
+                Nome
+              </label>
+              <input
+                type="text"
+                value={inputName}
+                onChange={this.handleChange}
+                data-testid="login-name-input"
+                id="inputName"
+                // placeholder="Nome"
+                autoComplete="off"
+                onClick={playMusic}
+                onKeyPress={(event) => {
+                  if (event.key === 'Enter') {
+                    this.onLoading({ name: inputName });
+                  }
+                }}
+              />
+            </div>
             {/* <input
               type="password"
               placeholder="Senha"
@@ -100,6 +105,13 @@ export default class Login extends Component {
               </button>
             )}
           </form>
+          <p className="frontEnd">
+            Projeto desenvolvido durante o modulo de <b>Front-End</b> enquanto estudava
+            na <b>Trybe.</b>
+          </p>
+          <div className='sidebar'>
+            <p>Desenvolvido por Leonardo Henrique.</p> <p>Consumindo API do iTunes.</p>
+          </div>
         </div>
       </div>
     );

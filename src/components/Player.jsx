@@ -10,8 +10,7 @@ export default class Player extends Component {
   render() {
     return (
       <div className="player">
-        <button onClick={playMusic}>Play</button>
-        <audio id="backgroundMusic">
+        <audio id="backgroundMusic" loop>
           <source src={music} type="audio/mp3" />
           Your browser does not support the audio element.
         </audio>

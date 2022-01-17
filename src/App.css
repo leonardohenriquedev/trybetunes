@@ -39,13 +39,13 @@ body {
 .login-wrapper {
   display: flex;
   width: 230px;
-  height: 220px;
+  height: 100vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #f9f9f6c4;
-  border-radius: 10px;
+  background-color: #ffffffcb;
   z-index: 10;
+  /* border: 2px solid black; */
 }
 
 .loginContainer img {
@@ -64,17 +64,50 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  height: 80px;
 }
 
 .loginForm input {
   margin-bottom: 10px;
-  width: 200px;
+  width: 190px;
   height: 25px;
-  border-radius: 10px;
   text-align: center;
   background-color: #f9f9f600;
   outline: none;
-  border: 1px solid rgba(0, 0, 0, 0.253);
+  border: none;
+  border-bottom: 2.5px solid rgba(0, 0, 0, 0.219);
+  transition: all 0.3s ease;
+  margin-top: -18px;
+}
+
+.labelName {
+  /* margin: -10px; */
+  font-size: 13px;
+  color: #3b3b3be0;
+}
+
+.boxName {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+}
+
+.loginForm input:focus {
+  border-bottom: 2.5px solid rgb(0, 190, 102);
+  margin-top: 0px;
+}
+
+.loginForm input:focus ~ .labelName {
+  color: green;
+}
+
+.frontEnd {
+  font-size: 14px;
+  margin-top: 80px;
+  padding: 0 15px;
+  color: rgb(83, 83, 83);
+  /* text-align: center; */
 }
 
 .loginForm button {
@@ -85,10 +118,30 @@ body {
   color: white;
   border-radius: 10px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .loginForm button:disabled {
   background-color: rgba(182, 182, 182, 0.671);
+}
+
+.sidebar {
+  width: 230px;
+  height: 50px;
+  background-color: rgba(21, 165, 64, 0.815);
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar p {
+  text-align: center;
+  margin-bottom: 2px;
+  font-size: 12px;
+  color: white;
 }
 
 header {
@@ -425,6 +478,6 @@ video {
   /* display: none; */
 }
 
-.player{
+.player {
   display: none;
 }
